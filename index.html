@@ -10,8 +10,9 @@
 <body>
     <section class="sec">
         <header>
-            <a href="http://"><img src="logo.png"></a>
-            <ul>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
                 <li><a href="">Home</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">What's New</a></li>
@@ -22,8 +23,8 @@
         <div class="content">
             <div class="textBox">
                 <h2>That's What <br><span>I like</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut maiores facere, vero magnam id assumenda asperiores quos provident porro maxime modi illo similique nobis cum reiciendis commodi excepturi exercitationem dignissimos.</p>
-                <a href="http://">View All Product</a>
+                <p>I'll drink water. Sometimes tomato juice, which I like. Sometimes orange juice, which I like. I'll drink different things. But the Coke or Pepsi boosts you up a little.</p>
+                <a href="pepsi2/index.html">View All Product</a>
             </div>
             <div class="imgBox">
                 <img src="pepsi001.png" class="pepsi">
@@ -47,6 +48,12 @@
         function changeBgColor(color) {
             const sec = document.querySelector('.sec');
             sec.style.background = color;
+        }
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu')
+            const navigation = document.querySelector('.navigation')
+            toggleMenu.classList.toggle('active')
+            navigation.classList.toggle('active')
         }
     </script>
 </body>
